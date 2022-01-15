@@ -1,0 +1,44 @@
+programa
+{
+
+    funçao  inicio
+    {
+        cadeia frutas[4]
+        inteiro contador = 0
+
+        frutas[0]="maça"
+        frutas[1]="pera"
+        frutas[2]="uva"
+        frutas[3]="melao"
+        
+        escreva(frutas[2])
+        
+        faça{
+ 
+           escreva(frutas[contador] + "\n"
+
+    {
+
+{
+
+
+
+programa
+{
+
+
+
+
+    funçao inicio()
+    {
+          cadeia cesta[][]={{"pera","100"},{"jaca","200"},{"maça","900"},{"uva","89"}}
+       
+          escreva ("produtos: *)
+          escreva (cesta[0][0])
+          escreva ("quantidade: *)
+          escreva (cesta[0][1])
+
+      }
+
+
+}

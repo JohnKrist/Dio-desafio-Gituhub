@@ -1,0 +1,75 @@
+John@JK2 MINGW64 ~
+$ ssh-keygen -ted25519
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/John/.ssh/id_ed25519):
+Created directory '/c/Users/John/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Passphrases do not match.  Try again.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/John/.ssh/id_ed25519
+Your public key has been saved in /c/Users/John/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:dAQ0OJC+F49ZMUoAgM7obVJDBTJ02JFlC0HgvOHlrLo John@JK2
+The key's randomart image is:
++--[ED25519 256]--+
+|+**OXB o+..      |
+|+.+++ = oo       |
+|++.o o o.o.      |
+|oo*o. o...       |
+|.ooo.. *S        |
+| o.o. + .        |
+| .o  .           |
+|.                |
+|E.               |
++----[SHA256]-----+
+
+John@JK2 MINGW64 ~
+$ cls
+bash: cls: command not found
+
+John@JK2 MINGW64 ~
+$ cld
+bash: cld: command not found
+
+John@JK2 MINGW64 ~
+$
+
+John@JK2 MINGW64 ~
+$ cd
+
+John@JK2 MINGW64 ~
+$ cd /c/user/john/.ssh
+bash: cd: /c/user/john/.ssh: No such file or directory
+
+John@JK2 MINGW64 ~
+$ cd /c/users/john/.ssh
+
+John@JK2 MINGW64 /c/users/john/.ssh
+$ ls
+id_ed25519  id_ed25519.pub
+
+John@JK2 MINGW64 /c/users/john/.ssh
+$ cat id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINHM787P9lUZV36dFkdyF3Am8axinyhYGa72PKSQ1NDl John@JK2
+
+John@JK2 MINGW64 /c/users/john/.ssh
+$ ls
+id_ed25519  id_ed25519.pub
+
+John@JK2 MINGW64 /c/users/john/.ssh
+$ pwd
+/c/users/john/.ssh
+
+John@JK2 MINGW64 /c/users/john/.ssh
+$ eval $(ssh-agent -s)
+Agent pid 690
+
+John@JK2 MINGW64 /c/users/john/.ssh
+$ ssh-add id_ed25519
+Enter passphrase for id_ed25519:
+Identity added: id_ed25519 (John@JK2)
+
+John@JK2 MINGW64 /c/users/john/.ssh
+$

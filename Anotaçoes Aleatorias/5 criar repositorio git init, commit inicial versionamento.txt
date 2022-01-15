@@ -1,0 +1,183 @@
+John@JK2 MINGW64 /c/workspace
+$  git config --global user.email "johnathankristhian@gmail.com"
+
+John@JK2 MINGW64 /c/workspace
+$ git config --global user.name john
+
+John@JK2 MINGW64 /c/workspace
+$ git commit -m "commit inicial"
+fatal: not a git repository (or any of the parent directories): .git
+
+John@JK2 MINGW64 /c/workspace
+$ ls
+livro-receitas/
+
+John@JK2 MINGW64 /c/workspace
+$ cd .git/
+bash: cd: .git/: No such file or directory
+
+John@JK2 MINGW64 /c/workspace
+$ ls -a
+./  ../  livro-receitas/
+
+John@JK2 MINGW64 /c/workspace
+$ mkdir livro-receitas
+mkdir: cannot create directory ‘livro-receitas’: File exists
+
+John@JK2 MINGW64 /c/workspace
+$ cd livro-receitas
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git init
+Reinitialized existing Git repository in C:/workspace/livro-receitas/.git/
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ cd .git/
+
+John@JK2 MINGW64 /c/workspace/livro-receitas/.git (GIT_DIR!)
+$ cd ..
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git add *
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git commit -m "commit inicial"
+[master (root-commit) b4853fd] commit inicial
+ 1 file changed, 8 insertions(+)
+ create mode 100644 strogonoff.md.txt
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+strogonoff.md.txt
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ mkdir receitas
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ mv strogonoff.md.tx ./receitas/
+mv: cannot stat 'strogonoff.md.tx': No such file or directory
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+receitas/  strogonoff.md.txt
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ mv strogonoff.md.txt ./receitas/
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+receitas/
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ cd receitas
+
+John@JK2 MINGW64 /c/workspace/livro-receitas/receitas (master)
+$ ls
+strogonoff.md.txt
+
+John@JK2 MINGW64 /c/workspace/livro-receitas/receitas (master)
+$ cd ..
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    strogonoff.md.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        receitas/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git add strogonff.md.txt receitas/
+fatal: pathspec 'strogonff.md.txt' did not match any files
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git add strogonoff.md.txt receitas/
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    strogonoff.md.txt -> receitas/strogonoff.md.txt
+
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git commit -m "cria pasta receitas, move arquivo para receitas"
+[master 71f03ac] cria pasta receitas, move arquivo para receitas
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename strogonoff.md.txt => receitas/strogonoff.md.txt (100%)
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+receitas/
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ echo > README.md
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git add *
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+John@JK
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 502 bytes | 167.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/JohnKrist/livro-de-receitas.git
+ * [new branch]      master -> master
+
+John@JK2 MINGW64 /c/workspace/livro-receitas (master)
+$ git pull origin master
+
+
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 684 bytes | 2.00 KiB/s, done.
+From https://github.com/JohnKrist/livro-de-receitas
+ * branch            master     -> FETCH_HEAD
+   71f03ac..82be23a  master     -> origin/master
+   error: Your local changes to the following files would be overwritten by merge:
+        README.md
+   Please commit your changes or stash them before you merge.
+   Aborting
+   Updating 71f03ac..82be23a

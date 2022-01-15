@@ -1,0 +1,37 @@
+                VETOR
+
+
+     funçao inicio()
+     { 
+
+            inteiro numeros[] ={39, 45, 54, 55}
+  
+            escreva(numeros[0])
+            //ou
+            para (inteiro posiçao =0; posiçao <=3; posiçao++){
+            { 
+                escreva(numeros[posicao]," ")
+            }
+      }
+
+
+
+                 MATRIZ
+        
+       funçao inicio()
+       {
+
+          //define as dimensoes da matriz
+          const inteiro TAMANHO = 5
+          
+          //cria matriz
+          inteiro matriz[TAMANHO][TAMANHO]
+
+          para (inteiro linha = 0; linha < TAMANHO; linha++)
+          {
+              para (inteiro coluna = 0; coluna < TAMANHO; coluna++)
+              {
+
+      
+          
+   
