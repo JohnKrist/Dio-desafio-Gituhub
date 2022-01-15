@@ -1,0 +1,218 @@
+John@JK2 MINGW64 ~
+$ dotnet new --help
+cd /c/gi
+Bem-vindo(a) ao .NET 6.0.
+---------------------
+Versão do SDK: 6.0.101
+
+Telemetria
+---------
+As ferramentas do .NET coletam dados de uso para ajudar-nos a aprimorar sua experiência. Eles são coletados pela Microsoft e compartilhados com a comunidade. Você pode recusar a telemetria definindo a variável de ambiente DOTNET_CLI_TELEMETRY_OPTOUT como '1' ou 'true' usando seu shell favorito.
+
+Leia mais sobre a telemetria das Ferramentas da CLI do .NET: https://aka.ms/dotnet-cli-telemetry
+
+----------------
+Um certificado de desenvolvimento HTTPS ASP.NET Core foi instalado.
+Para confiar no certificado, execute 'dotnet dev-certs https --trust' (somente Windows e macOS).
+Saiba mais sobre HTTPS: https://aka.ms/dotnet-https
+----------------
+Escreva seu primeiro aplicativo: https://aka.ms/dotnet-hello-world
+Descubra o que há de novo: https://aka.ms/dotnet-whats-new
+Explore a documentação: https://aka.ms/dotnet-docs
+Relate problemas e encontre a fonte no GitHub: https://github.com/dotnet/core
+Use 'dotnet --help' para ver os comandos disponíveis ou visite: https://aka.ms/dotnet-cli
+--------------------------------------------------------------------------------------
+Usage: new [options]
+
+Options:
+  -h, --help                     Exibe a ajuda para este comando.
+  -l, --list <PARTIAL_NAME>      Lista os modelos que contêm o nome do modelo especificado. Se nenhum nome for especificado, lista todos os modelos.
+  -n, --name                     O nome da saída que está sendo criada. Se nenhum nome for especificado, o nome do diretório de saída será usado.
+  -o, --output                   Local para colocar a saída gerada.
+  -i, --install                  Instala um pacote de origem ou de modelo.
+  -u, --uninstall                Instala uma origem ou pacote de modelo.
+  --interactive                  Permite que o comando dotnet restore interno seja interrompido e aguarde a ação ou entrada do usuário (por exemplo, para concluir a autenticação).
+  --add-source, --nuget-source   Especifica uma fonte do NuGet a ser usada durante a instalação.
+  --type                         Filtra modelos com base em tipos disponíveis. Os valores predefinidos são "projeto" e "item".
+  --dry-run                      Exibe um resumo do que aconteceria se a linha de comando especificada fosse executada se resultar em uma criação de modelo.
+  --force                        Força o conteúdo a ser gerado mesmo que ele altere arquivos existentes.
+  -lang, --language              Filtra modelos baseados em linguagem e especifica o idioma do modelo a ser criado.
+  --update-check                 Verifique os pacotes de modelo instalados atualmente para atualização.
+  --update-apply                 Verifique os pacotes de modelo instalados atualmente para atualização e instale as atualizações.
+  --search <PARTIAL_NAME>        Pesquisa os modelos em NuGet.org.
+  --author <AUTHOR>              Filtra os modelos com base no autor do modelo. Aplicável somente com --busca ou --lista | -l opção.
+  --package <PACKAGE>            Filtra os modelos baseados na ID do pacote NuGet. aplica-se a --pesquisa.
+  --columns <COLUMNS_LIST>       Lista de colunas separadas por vírgulas a serem exibidas na saída --lista e --pesquisa.
+                                 As colunas com suporte são: idioma, marcas, autor, tipo.
+  --columns-all                  Exibir todas as colunas na saída de --lista e --pesquisa.
+  --tag <TAG>                    Filtra os modelos com base na marca. Aplica-se a --pesquisa e --lista.
+  --no-update-check              Desativa a verificação de atualizações de pacote de modelo ao instanciar um modelo.
+
+
+
+John@JK2 MINGW64 ~
+$ dotnet new
+O comando 'dotnet new' criar um projeto .NET baseado em um modelo.
+
+Os modelos comuns são:
+Nome do modelo               Nome Curto    Idioma      Tags
+---------------------------  ------------  ----------  -------------------
+Aplicativo do Console        console       [C#],F#,VB  Common/Console
+Aplicativo do Windows Forms  winforms      [C#],VB     Common/WinForms
+Aplicativo WPF               wpf           [C#],VB     Common/WPF
+ASP.NET Core Web App         webapp,razor  [C#]        Web/MVC/Razor Pages
+Biblioteca de Classes        classlib      [C#],F#,VB  Common/Library
+Blazor Server App            blazorserver  [C#]        Web/Blazor
+
+Um exemplo seria:
+   dotnet new console
+
+Exibir opções de modelos com:
+   dotnet new console -h
+Exibir todos os modelos instalados com:
+   dotnet new --list
+Exibir modelos disponíveis no NuGet.org com:
+   dotnet new web --search
+
+
+John@JK2 MINGW64 ~
+$
+
+John@JK2 MINGW64 ~
+$ dotnet new console -h
+Aplicativo do Console (C#)
+Autor: Microsoft
+Descrição: Um projeto para criar um aplicativo de linha de comando que pode ser executado no .NET Core no Windows, Linux e macOS
+Opções:                                                                         
+  --langVersion  Sets the LangVersion property in the created project file      
+                 text - Optional                                                
+
+  --no-restore   If specified, skips the automatic restore of the project on create.
+                 bool - Optional                                                
+                 Padrão: false                                                  
+
+
+Para ver a ajuda de outros idiomas de modelo (F#, VB), use a opção--language:
+   dotnet new console -h --language F#
+
+
+John@JK2 MINGW64 ~
+$
+
+John@JK2 MINGW64 ~
+$ cd /c/workspace
+
+John@JK2 MINGW64 /c/workspace
+$ dotnet new console -n Digital innovationOne
+Erro: Opções inválidas:
+  innovationOne
+Para obter informações de uso, execute:
+   dotnet new -h
+
+John@JK2 MINGW64 /c/workspace
+$ dotnet new console -n DigitalInnovationOne
+O modelo "Aplicativo do Console" foi criado com êxito.
+
+Processando ações pós-criação...
+Executando 'dotnet restore' em C:\workspace\DigitalInnovationOne\DigitalInnovationOne.csproj...
+  Determinando os projetos a serem restaurados...
+  C:\workspace\DigitalInnovationOne\DigitalInnovationOne.csproj restaurado (em 968 ms).
+A restauração foi bem-sucedida.
+
+
+John@JK2 MINGW64 /c/workspace
+$ cd
+
+John@JK2 MINGW64 ~
+$ cd
+
+John@JK2 MINGW64 ~
+$ cd /c/workspace/DigitalInnovationOne
+
+John@JK2 MINGW64 /c/workspace/DigitalInnovationOne
+$ explorer .
+
+John@JK2 MINGW64 /c/workspace/DigitalInnovationOne
+$ code .
+
+John@JK2 MINGW64 /c/workspace/DigitalInnovationOne
+$ dotnet restore
+  Determinando os projetos a serem restaurados...
+  Todos os projetos estão atualizados para restauração.
+
+John@JK2 MINGW64 /c/workspace/DigitalInnovationOne
+$ dotnet build
+Microsoft(R) Build Engine versão 17.0.0+c9eb9dd64 para .NET
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+  Determinando os projetos a serem restaurados...
+  Todos os projetos estão atualizados para restauração.
+  DigitalInnovationOne -> C:\workspace\DigitalInnovationOne\bin\Debug\net6.0\DigitalInnovationOne.dll
+
+Compilação com êxito.
+    0 Aviso(s)
+    0 Erro(s)
+
+Tempo Decorrido 00:00:40.48
+
+John@JK2 MINGW64 /c/workspace/DigitalInnovationOne
+$ dotnet run
+Hello, World!
+
+John@JK2 MINGW64 /c/workspace/DigitalInnovationOne
+$ dotnet build
+Microsoft(R) Build Engine versão 17.0.0+c9eb9dd64 para .NET
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+  Determinando os projetos a serem restaurados...
+  Todos os projetos estão atualizados para restauração.
+  DigitalInnovationOne -> C:\workspace\DigitalInnovationOne\bin\Debug\net6.0\DigitalInnovationOne.dll
+
+Compilação com êxito.
+    0 Aviso(s)
+    0 Erro(s)
+
+Tempo Decorrido 00:00:02.33
+
+John@JK2 MINGW64 /c/workspace/DigitalInnovationOne
+$ dotnet run
+Hello, World!
+
+John@JK2 MINGW64 /c/workspace/DigitalInnovationOne
+$ dotnet build
+Microsoft(R) Build Engine versão 17.0.0+c9eb9dd64 para .NET
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+  Determinando os projetos a serem restaurados...
+  Todos os projetos estão atualizados para restauração.
+C:\workspace\DigitalInnovationOne\Program.cs(16,62): error CS1002: ; esperado [C:\workspace\DigitalInnovationOne\DigitalInnovationOne.csproj]
+
+FALHA da compilação.
+
+C:\workspace\DigitalInnovationOne\Program.cs(16,62): error CS1002: ; esperado [C:\workspace\DigitalInnovationOne\DigitalInnovationOne.csproj]
+    0 Aviso(s)
+    1 Erro(s)
+
+Tempo Decorrido 00:00:08.72
+
+John@JK2 MINGW64 /c/workspace/DigitalInnovationOne
+$ dotnet run
+CSC : error CS5001: Programa não contém um método "Main" estático adequado para um ponto de entrada [C:\workspace\DigitalInnovationOne\DigitalInnovationOne.csproj]
+
+Ocorreu uma falha no build. Corrija os erros de build e execute novamente.
+
+John@JK2 MINGW64 /c/workspace/DigitalInnovationOne
+$ dotnet run
+Bem vindo ao curso9
+Bem vindo ao curso8
+Bem vindo ao curso7
+Bem vindo ao curso6
+Bem vindo ao curso5
+Bem vindo ao curso4
+Bem vindo ao curso3
+Bem vindo ao curso2
+Bem vindo ao curso1
+Bem vindo ao curso0
+
+John@JK2 MINGW64 /c/workspace/DigitalInnovationOne
+$
