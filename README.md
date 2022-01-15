@@ -1,4 +1,4 @@
 # Desafios Git/Github da Dio
-Projeto sobre Github
+Repositório criado para estudo
 ## Links Uteis 
 [Sintaxe Markdown](www.markdownguide.org/basic-syntax/)
